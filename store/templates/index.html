@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <style>
+        .pxe {
+            width: -webkit-fill-available;
+            margin-top: 6px;
+        }
+
+        .headerstyle {
+            background-color: white;
+            border: 2px solid mediumblue;
+            float: left;
+            padding-right: 382px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerstyle">
+        <table>
+            <tr>
+                <td>
+                    <img src="{% static 'SHOPKART_LOGO.png' %}" class="imgsize">
+                </td>
+                <td class="homestyle">
+                    <a href="index" class="navbartextcolor">Home</a>
+                </td>
+                <td class="productstyle">
+                    <a href="dap" class="navbartextcolor">Products</a>
+                </td>
+                <td class="loginstyle">
+                    <a href="login" class="navbartextcolor">Login</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <img src="{% static 'pixelcut-export.jpg' %}" class="pxe">
+</body>
+
+</html>

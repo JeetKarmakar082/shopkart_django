@@ -1,0 +1,88 @@
+<!-- anp = insert -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .loginheaderstyle {
+            background-color: white;
+            border: 2px solid mediumblue;
+            float: left;
+            padding-right: 55%;
+            margin-left: -401px;
+            margin-right: auto;
+        }
+
+        .loginbodycontainer {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .editcontainer {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: darkblue;
+            width: 450px;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 152px;
+            border-radius: 36px;
+        }
+
+        .atbut {
+            height: 36px;
+            width: 300Px;
+        }
+
+        .sbst {
+            margin-left: 90px;
+            width: 120px;
+            height: 30px;
+        }
+
+        h1 {
+            color: mediumblue;
+            font-size: 42px;
+            margin-left: 165px;
+        }
+    </style>
+</head>
+<header class="loginheaderstyle">
+    <table>
+        <tr>
+            <td>
+                <img src="{% static 'SHOPKART_LOGO.png' %}" class="imgsize">
+            </td>
+            <td class="homestyle">
+                <a href="index" class="navbartextcolor">Home</a>
+            </td>
+            <td class="productstyle">
+                <a href="dap" class="navbartextcolor">Products</a>
+            </td>
+            <td class="loginstyle">
+                <a href="login" class="navbartextcolor">Login</a>
+            </td>
+        </tr>
+    </table>
+</header>
+
+<body class="loginbodycontainer">
+    <h1>ADD NEW PRODUCT</h1>
+    <form action="ins" class="editcontainer">
+        <div><input type="text" placeholder="Name" name="a1" class="atbut"></div>
+        <div><input type="text" placeholder="Stock" name="a2" class="atbut"></div>
+        <div><input type="text" placeholder="Manufactury(DDMMYYYY)" name="a3" class="atbut"></div>
+        <div><input type="text" placeholder="Expiry(DDMMYYYY)" name="a4" class="atbut"></div>
+        <div><input type="text" placeholder="Approval(Yes/No)" name="a5" class="atbut"></div>
+        <div><input type="submit" value="Add" class="sbst">
+    </form>
+</body>
+
+</html>
