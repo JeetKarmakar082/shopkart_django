@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .loginheaderstyle {
+            background-color: white;
+            border: 2px solid mediumblue;
+            float: left;
+            padding-right: 85%;
+            margin-left: 132px;
+            margin-right: 533px;
+        }
+
+        .loginbodycontainer {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .editcontainer {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: darkblue;
+            width: 450px;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 660px;
+            border-radius: 36px;
+        }
+
+        .atbut {
+            height: 36px;
+            width: 300Px;
+        }
+
+        .sbst {
+            margin-left: 90px;
+            width: 120px;
+            height: 30px;
+        }
+
+        h1 {
+            color: mediumblue;
+            font-size: 42px;
+            margin-left: 660px;
+        }
+    </style>
+</head>
+<header class="loginheaderstyle">
+    <table>
+        <tr>
+            <td>
+                <img src="{% static 'SHOPKART_LOGO.png' %}" class="imgsize">
+            </td>
+            <td class="homestyle">
+                <a href="home" class="navbartextcolor">Home</a>
+            </td>
+            <td class="productstyle">
+                <a href="dap" class="navbartextcolor">Products</a>
+            </td>
+            <td class="loginstyle">
+                <a href="login" class="navbartextcolor">Login</a>
+            </td>
+        </tr>
+    </table>
+</header>
+
+<body class="loginbodycontainer">
+    <h1>MANIPULATE STOCK</h1>
+    <form action="../upd/{{a.id}}" class="editcontainer">
+        <div><input type="text" name="a1" value="{{a.name}}" class="atbut" placeholder="Name"></div>
+        <div><input type="text" name="a2" value="{{a.stock}}" class="atbut" placeholder="Stock"></div>
+        <div><input type="text" name="a3" value="{{a.manufacture}}" class="atbut" placeholder="DDMMYYYY"></div>
+        <div><input type="text" name="a4" value="{{a.expiry}}" class="atbut" placeholder="DDMMYYYY"></div>
+        <div><input type="text" name="a5" value="{{a.approval}}" class="atbut" placeholder="Yes/No"></div>
+        <div><input type="submit" value="update" class="sbst">
+    </form>
+</body>
+
+</html>

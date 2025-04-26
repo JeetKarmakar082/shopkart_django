@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .headerstyle {
+            background-color: white;
+            float: left;
+            margin-bottom: 50px;
+            margin-top: 2px;
+            padding-right: 412px;
+        }
+
+        .dashst {
+            display: grid;
+            justify-content: center;
+            font-size: 42px;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+        }
+
+        .adph {
+            font-size: 40px;
+        }
+
+        .tstyle {
+            color: darkblue;
+            border-color: darkblue;
+            border-width: 2px;
+            font-family: cursive;
+            font-size: 30px;
+        }
+
+        details {
+            color: midnightblue;
+        }
+
+        .dsa {
+            color: blue;
+            font-size: smaller;
+            text-decoration: none;
+            border: 2px solid blue;
+            border-radius: 12px;
+        }
+
+        .dsa:hover {
+            color: mediumblue;
+            border: 2px solid mediumblue;
+        }
+
+        marquee {
+            font-size: 24px;
+            color: blue;
+            margin-top: -50px;
+        }
+
+        .lout {
+            font-size: 42px;
+            color: midnightblue;
+            border: 2px solid midnightblue;
+            margin-right: 406px;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+
+        .lout:hover {
+            color: white;
+            background-color: midnightblue;
+            border: 2px solid white
+        }
+    </style>
+</head>
+<header class="headerstyle">
+    <table>
+        <tr>
+            <td>
+                <img src="{% static 'SHOPKART_LOGO.png' %}" class="imgsize">
+            </td>
+            <td class="homestyle">
+                <a href="home" class="navbartextcolor">Home</a>
+            </td>
+            <td class="productstyle">
+                <a href="dap" class="navbartextcolor">Products</a>
+            </td>
+            <td class="loginstyle">
+                <a href="login" class="navbartextcolor">Login</a>
+            </td>
+        </tr>
+    </table>
+</header>
+
+<body>
+    <div>
+        <marquee>
+            <h1>Admin Dashboard</h1>
+        </marquee>
+    </div>
+    <div class="dashst">
+        <table border="6" class="tstyle">
+            <tr>
+                <td>
+                    <img src="{% static 'pngwing.com.png' %}" alt="">
+                </td>
+                <td>
+                    <h1 class="adph">Name : Admin</h1>
+                </td>
+            </tr>
+        </table>
+        <div>
+        <details>
+            <summary>View all products :-</summary>
+            <a href="dap" class="dsa" target="_blank">All products -></a>
+        </details>
+        <details>
+            <summary>Add new product :-</summary>
+            <a href="anp" class="dsa" target="_blank">Add new product -></a>
+        </details>
+        <details>
+            <summary>Approve or Disapprove stocks :-</summary>
+            <a href="aprv_pro" class="dsa" target="_blank">Approve or Disapprove stocks -></a>
+        </details>
+        <details>
+            <summary>View only approved stocks :-</summary>
+            <a href="only_aprp" class="dsa" target="_blank">View only approved stocks -></a>
+        </details>
+        <details>
+            <summary>Edit stocks :-</summary>
+            <a href="edit_stock" class="dsa" target="_blank">Edit existing stocks -></a>
+        </details>
+        <details>
+            <summary>Delete stocks :-</summary>
+            <a href="delete_stock" class="dsa" target="_blank">Delete existing stocks -></a>
+        </details>
+        <a href="login" class="lout">Log out -></a>
+        </div>
+    </div>
+</body>
+
+</html>
