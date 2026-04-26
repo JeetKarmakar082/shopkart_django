@@ -8,7 +8,7 @@ urlpatterns=[
     path('ins',views.ins),
     path('showuser',views.showuser),
     path('dele/<int:id>',views.dele),
-    path('index',views.index),
+    path('',views.index),
     path('edit_stock',views.edit_stock),
     path('edit/<int:id>',views.edit),
     path('upd/<int:id>',views.upd),
